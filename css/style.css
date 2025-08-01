@@ -1,0 +1,159 @@
+/*sirve para tener limpio el diseño*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*encabezado*/
+header{
+ background-color: #4385ff;
+ display: block;
+ width: 100%;
+ font-family: "Dancing Script", cursive;
+ font-weight: 700;
+ padding-top: none;
+}
+nav{
+    width: 100%;
+    height: 80px;
+}
+.lista{
+    color: white;
+    font-size: 20px;
+    margin-left: 10px;
+    display: inline;
+    margin-right: 6px;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.lista {
+  position: relative;
+}
+
+.boton-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+/*imagen logo*/
+.logo {
+    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-left:0px;
+    margin-right: 5px;
+    margin-top: 10px;
+    display: inline;
+}
+
+/*imagen menu*/
+.img-menu {
+    margin-left:5px;
+    margin-top: 10px;
+    margin-bottom: none;
+    width: 55px;     /* o el tamaño que vos quieras */
+    height: auto;    /* mantiene la proporción */
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.submenu li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #444;
+}
+
+/* Mostrar el submenú al pasar el mouse por la lista entera */
+.lista:hover .submenu {
+  display: block;
+}
+
+/*pie de pagina*/
+footer{
+    background-color:#901501;
+    
+}
+
+/*cuerpo de pagina*/
+@font-face {
+    font-family: "ancizar_serif";
+    src: url(../fonts/Ancizar_Serif/AncizarSerif-Italic-VariableFont_wght.ttf);
+}
+body{
+    
+    background-color: white;
+}
+p{
+    color:red;
+    font-family: "ancizar_serif";
+}
+
+/*carrusel*/
+.carrusel{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    overflow-x: auto;
+    margin: 60px auto;
+    width: 90%;
+}
+.carrusel img{
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    width: 230px;
+    height: 345px;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+/*enlaces*/
+.head{
+    font-size: 43px;
+    color: white;
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    margin-top: 10%;
+}
+a:hover{
+    color:#BD8C00;
+}
+/*img.menu-img{
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    cursor: pointer;*/
+/*.rayas2{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    bottom: 10px;
+    cursor: pointer;
+}*/
