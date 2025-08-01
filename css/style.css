@@ -25,6 +25,16 @@ nav{
     margin-right: 6px;
 }
 
+@media (max-width:530px) {
+    header, nav {
+        flex-direction: column;
+    }
+    nav {
+        /*margin-top: 15px;*/
+        align-items: center;
+    }
+}
+
 .menu {
   list-style: none;
   margin: 0;
@@ -91,11 +101,15 @@ nav{
   display: block;
 }
 
+
+
 /*pie de pagina*/
 footer{
     background-color:#901501;
     
 }
+
+
 
 /*cuerpo de pagina*/
 @font-face {
@@ -112,6 +126,7 @@ p{
 }
 
 /*carrusel*/
+/*
 .carrusel{
     display: flex;
     flex-flow: row nowrap;
