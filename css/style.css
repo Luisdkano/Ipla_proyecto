@@ -86,7 +86,7 @@ nav{
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #222;
+  background-color: #4199ffce;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -145,6 +145,25 @@ h2{
     margin-top: 20px;
     margin-bottom: 10px;
 }
+h3{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: #110eb9;
+    margin-top: 20px;
+    margin-left: 60px;
+    padding-left: 62px;
+    margin-bottom: 8px;
+}
+h4{
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: #1542becc;
+    margin-top: 3px;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
 p{
     width: 90%;
     margin: 0 auto;
@@ -152,6 +171,47 @@ p{
     font-family: "ancizar_serif", serif;
     color: #333;
     font-size: 20px;
+}
+
+.pag2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: #000;
+    margin: 10px 20px;
+    list-style: none;
+}
+.pag2 {
+    list-style: none; /* quita el punto original si existe */
+}
+
+.pag2::before {
+    content: "▶";     /* símbolo del punto */
+    color: rgb(17, 100, 255);      /* color */
+    font-size: 22px;  /* tamaño */
+    margin-right: 4px;/* espacio entre punto y texto */
+}
+.p2{
+  background:linear-gradient(to right,#65a3ffe8 , #65a3ff49); 
+    padding: 15px;
+    margin-top: 60px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 935px; 
+    height: 450px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif; 
+}
+.page2 {
+    background: linear-gradient(to left,#7bcdfc , #7bcdfc60); 
+    margin-left: 20px;
+    margin-right: 10px;
+    align-items:center;
+    width: 800px; 
+    height: 400px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif; 
+    box-sizing: border-box;
 }
 
 /*Imagenes del cuerpo*/
@@ -167,6 +227,23 @@ p{
     margin-right: 20px;
     float: left;
 }
+.contenedor {
+    display: flex;
+    /* quita row-reverse si querés texto a la izquierda e imagen a la derecha */
+    flex-direction: row-reverse;   /* o quitá esta línea para invertir */
+    align-items: center;           /* centra verticalmente */
+    justify-content: center;       /* centra horizontalmente */
+    gap: 20px;                     /* espacio entre ambos */
+    margin: 20px auto;             /* centrado del bloque */
+    width: 100%;
+    box-sizing: border-box;
+
+} 
+.concientiza{
+    width: 800px;          /* tamaño de la imagen */
+    height: 400px; 
+    margin-right: 40px;
+} 
 /*carrusel*/
 /*
 .carrusel{
