@@ -6,7 +6,7 @@
 }
 /*encabezado*/
 header{
- background-color: #4385ff;
+ background-color: #00369ad6;
  display: block;
  width: 100%;
  font-family: "Dancing Script", cursive;
@@ -70,6 +70,7 @@ nav{
     margin-left:0px;
     margin-right: 3px;
     margin-top: 10px;
+    border-radius: 60px;
     display: inline;
 }
 
@@ -127,7 +128,7 @@ footer{
 }
 body{
     
-    background-color: white;
+    background-color: #e7dede;
 }
 h1{
     text-align: center;
@@ -156,13 +157,11 @@ h3{
     margin-bottom: 8px;
 }
 h4{
-    text-align: left;
+    text-align: right;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     color: #1542becc;
-    margin-top: 3px;
-    padding-left: 25px;
-    margin-bottom: 15px;
+    margin-right: 70px;
 }
 p{
     width: 90%;
@@ -171,6 +170,61 @@ p{
     font-family: "ancizar_serif", serif;
     color: #333;
     font-size: 20px;
+}
+
+.parrafo{
+    font-size: 20px;
+    color: #272759;
+    list-style: none;
+    margin:10px 20px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
+
+.parrafo::before {
+    content: "•";     /* símbolo del punto */
+    color: rgb(58, 80, 163);      /* color */
+    font-size: 22px;  /* tamaño */
+    margin-right: 4px;/* espacio entre punto y texto */
+}
+
+.alcoholismo {
+  background: #57a95853;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 50px 50px;
+  margin-right: 950px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.tabaquismo {
+  background: #2e72c553;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 50px 50px;
+  margin-left: 950px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.adiccion {
+    margin-top: 30px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: auto;
+    float: left;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.alcoholl {
+    margin-top: 50px;
+    display: flex;
+    margin-right: 50px;
+    float: right;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .pag2{
@@ -194,13 +248,14 @@ p{
   background:linear-gradient(to right,#65a3ffe8 , #65a3ff49); 
     padding: 15px;
     margin-top: 60px;
-    margin-left: 20px;
+    margin-left: 500px;
     margin-right: 10px;
     margin-bottom: 10px;
-    width: 935px; 
+    width: 1005px; 
     height: 450px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-    font-family: Arial, sans-serif; 
+    font-family: Arial, sans-serif;
+    border-radius: 15px;
 }
 .page2 {
     background: linear-gradient(to left,#7bcdfc , #7bcdfc60); 
@@ -233,7 +288,7 @@ p{
     flex-direction: row-reverse;   /* o quitá esta línea para invertir */
     align-items: center;           /* centra verticalmente */
     justify-content: center;       /* centra horizontalmente */
-    gap: 20px;                     /* espacio entre ambos */
+    gap: 150px;                     /* espacio entre ambos */
     margin: 20px auto;             /* centrado del bloque */
     width: 100%;
     box-sizing: border-box;
@@ -294,3 +349,99 @@ a:hover{
     bottom: 10px;
     cursor: pointer;
 }*/
+
+.autoridad{
+    width: 450px;
+    margin-left: 0px;
+    float: right;
+    border-radius: 20px;
+}
+
+.video-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+        .footer-principal {
+            background-color: #333; /* Fondo gris oscuro */
+            color: #fff; /* Texto blanco */
+            padding: 20px 0; /* Relleno superior e inferior */
+            font-family: Arial, sans-serif;
+            margin-top: 40px; /* Separación del contenido principal */
+        }
+
+        /* Contenedor de enlaces de contacto */
+        .footer-contactos {
+            display: flex;
+            justify-content: center; /* Centra los iconos horizontalmente */
+            gap: 30px; /* Espacio entre los enlaces */
+            margin-bottom: 15px;
+        }
+
+        /* Estilos para los enlaces (teléfono, WhatsApp, email) */
+        .footer-contactos a {
+            color: #fff; /* Color del texto del enlace */
+            text-decoration: none; /* Quita el subrayado predeterminado */
+            transition: color 0.3s; /* Transición para el efecto hover */
+        }
+
+        .footer-contactos a:hover {
+            color: #4CAF50; /* Color verde al pasar el mouse (similar a WhatsApp) */
+        }
+
+        /* Estilos para la sección de Copyright */
+        .footer-copyright {
+            text-align: center; /* Centra el texto */
+            font-size: 0.9em;
+            padding-top: 10px;
+            border-top: 1px solid #444; /* Línea separadora */
+        }
+
+        /* Estilos para íconos (simulados sin librerías) */
+        .icon::before {
+            margin-right: 5px;
+        }
+        .icon.phone::before { content: "📞"; }
+        .icon.whatsapp::before { content: "📱"; }
+        .icon.email::before { content: "📧"; }
+
+        /* Estilos para hacerlo responsivo (opcional) */
+        @media (max-width: 600px) {
+            .footer-contactos {
+                flex-direction: column; /* Apila los enlaces en pantallas pequeñas */
+                gap: 10px;
+                align-items: center;
+            }
+        }
+
+        img {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto;  /* Mantiene la proporción de la imagen */
+}
+
+/* --- Estilos base para móviles (Mobile First) --- */
+.container {
+    width: 100%;
+    padding: 10px;
+    /* Los elementos de navegación apilados verticalmente */
+}
+.caja-columna {
+    width: 100%; /* Cada caja ocupa el 100% del ancho */
+    margin-bottom: 20px;
+}
+
+/* --- Media Query para tabletas y escritorios (a partir de 768px) --- */
+@media (min-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 0 auto; /* Centra el contenedor */
+    }
+    .caja-columna {
+        width: 33.33%; /* Tres cajas una al lado de la otra */
+        float: left; /* O usa Flexbox/Grid */
+        padding: 0 10px;
+    }
+}
