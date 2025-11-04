@@ -25,12 +25,58 @@ nav{
     margin-right: 4px;
 }
 
-@media (max-width:530px) {
-    header, nav {
-        flex-direction: column;
+@media (max-width:768px) {
+    .alcoholismo,
+    .tabaquismo {
+        max-height: none;
+        overflow: visible;
     }
-    nav {
-        align-items: center;
+    .alcoholl,
+    .adiccion {
+        height: auto;
+        max-height: none;
+    }
+    .contenedor-tabaquismo,  .contenedor-alcoholismo{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "alcoholismo"
+        "alcoholl"
+        "adiccion" 
+        "tabaquismo"
+        "footer";
+         grid-template-columns: 1fr;
+    }
+    
+}
+@media (min-width: 1200px) {
+    /*   .alcoholismo,
+    .tabaquismo {
+        max-height: 30rem; 
+        overflow: auto;
+    }
+     .alcoholl,
+    .adiccion {
+          width: 100%;
+        height: auto;       
+        max-height: 30rem; 
+        object-fit: cover;  
+    }*/
+
+    .contenedor-tabaquismo, .contenedor-alcoholismo{
+         display: grid;
+       /* gap: 2rem;
+        align-items: start;
+        max-width: 1200px;*/
+        /*margin: 2rem auto;*/
+        grid-template-areas: 
+        "header header header"
+        "alcoholismo alcoholismo alcoholl"
+        "adiccion adiccion tabaquismo"
+        "footer footer footer";
+         grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        
     }
 }
 
@@ -181,6 +227,15 @@ p{
     margin-right: 10px;
     margin-left: 15px;
 }
+.parrafo2{
+    font-size: 20px;
+    color: #272759;
+    list-style: none;
+    margin:10px 20px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 15px;
+}
 
 .parrafo::before {
     content: "•";     /* símbolo del punto */
@@ -190,42 +245,64 @@ p{
 }
 
 .alcoholismo {
-  background: #57a95853;
-  padding: 1.5rem;
+grid-area: alcoholismo;
+  background: hsla(121, 32%, 50%, 0.325);
+  padding: 1rem;
   border-radius: 15px;
-  margin: 50px 50px;
-  margin-right: 950px;
-  margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-height: none;
 }
-
-.tabaquismo {
-  background: #2e72c553;
-  padding: 1.5rem;
-  border-radius: 15px;
-  margin: 50px 50px;
-  margin-left: 950px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.adiccion {
-    margin-top: 30px;
-    display: flex;
-    margin-left: 20px;
-    margin-right: auto;
-    float: left;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.contenedor-alcoholismo {
+    display: grid;
+    grid-template-columns: 1fr; /* iframe y div lado a lado */
+    gap: 2rem;
+    margin: 1rem 2rem;
+    /*max-width: 1200px;*/
 }
 
 .alcoholl {
-    margin-top: 50px;
-    display: flex;
-    margin-right: 50px;
-    float: right;
+    grid-area: alcoholl;
+     width:40rem;
+    height: 20rem;
+    margin: 2rem 1rem;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
 }
+
+
+.contenedor-tabaquismo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 6rem 2rem;
+    max-width: 100%;
+}
+
+.tabaquismo {
+    grid-area: tabaquismo;
+  background: #2e72c553;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  /*object-fit: cover;*/
+   max-height:none;
+     overflow: visible; 
+}
+
+.adiccion {
+    grid-area: adiccion;
+    /*display: block;*/
+    width: 40rem;
+    height: 20rem;
+    margin: 1rem 2rem;
+    /*object-fit: cover;*/
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    /*max-height: none;*/
+}
+
+
 
 .pag2{
     font-family: Georgia, 'Times New Roman', Times, serif;
