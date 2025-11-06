@@ -10,15 +10,20 @@ header{
  display: block;
  width: 100%;
  font-family: "Dancing Script", cursive;
+ font-size: 1rem;
  font-weight: 700;
- padding-top: none;
+ padding: 0;
+ margin: 0;
 }
+
 nav{
     width: 100%;
     height: 80px;
+    display: flex;
+  align-items: center;
 }
 .lista{
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     margin-left: 7px;
     display: inline;
@@ -26,57 +31,106 @@ nav{
 }
 
 @media (max-width:768px) {
-    .alcoholismo,
-    .tabaquismo {
-        max-height: none;
-        overflow: visible;
-    }
-    .alcoholl,
-    .adiccion {
-        height: auto;
-        max-height: none;
-    }
-    .contenedor-tabaquismo,  .contenedor-alcoholismo{
+      body.home .contenedor-tabaquismo,
+      body.home .contenedor-alcoholismo{  
         display: grid;
         grid-template-areas: 
         "header"
-        "alcoholismo"
         "alcoholl"
+        "alcoholismo"
         "adiccion" 
         "tabaquismo"
         "footer";
          grid-template-columns: 1fr;
+         grid-template-rows: auto;
+          min-height: 100vh;
+        box-sizing: border-box;
+        max-width: 100%;
+        gap:1rem;
+         
     }
+    body.home .contenedor-tabaquismo {
+        align-items: center;
+        margin: 20px;
+        justify-items: center;
+        max-width: 100%;
+  }
+    .adiccion {
+    max-width: 600px; /* podés ajustar este tamaño */
+}
+   .alcoholl,
+  .adiccion {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  } 
+
+  body.institucional .p2,
+  body.institucional .page2 {
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "page2"
+        "footer";
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+          min-height: 100vh;
+        box-sizing: border-box;
+        max-width: 100%;
+        gap:1rem;
+  }
+
+
+
+    body {
+    overflow-x: hidden;
+  }
     
 }
-@media (min-width: 1200px) {
-    /*   .alcoholismo,
-    .tabaquismo {
-        max-height: 30rem; 
-        overflow: auto;
-    }
+@media (min-width: 769px) and (max-width: 1199px) {
+  .contenedor-tabaquismo,
+  .contenedor-alcoholismo {
+     display: grid;
+        grid-template-areas: 
+        "header"
+        "alcoholl"
+        "alcoholismo"
+        "adiccion" 
+        "tabaquismo"
+        "footer";
+        justify-items: center;
+         grid-template-columns: 1fr;
+         grid-template-rows: auto;
+          min-height: 100vh;
+        box-sizing: border-box;
+        max-width: 100%;
+        gap:1rem;
+  }
      .alcoholl,
-    .adiccion {
-          width: 100%;
-        height: auto;       
-        max-height: 30rem; 
-        object-fit: cover;  
-    }*/
-
+  .adiccion {
+    
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
+@media (min-width: 1200px) {
     .contenedor-tabaquismo, .contenedor-alcoholismo{
          display: grid;
-       /* gap: 2rem;
-        align-items: start;
-        max-width: 1200px;*/
-        /*margin: 2rem auto;*/
         grid-template-areas: 
         "header header header"
         "alcoholismo alcoholismo alcoholl"
         "adiccion adiccion tabaquismo"
         "footer footer footer";
-         grid-template-columns: 1fr 3fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        
+         grid-template-columns: 1fr 1fr 1fr;
+         grid-template-rows: 0.2fr 1fr;
     }
 }
 
@@ -94,7 +148,7 @@ nav{
 .boton-menu {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   text-decoration: none;
   color: #007bff;
   font-weight: bold;
@@ -102,20 +156,22 @@ nav{
 .inicio {
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin-left: 10px;
-  display: inline-flexbox;
+  margin-left: 5px;
   margin-right: 6px;
-  padding-top: 7px;
+  padding-top: 5px;
+}
+.inicio a.head{
+    font-size: 35px !important;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /*imagen logo*/
 .logo {
-    width: 100px; /* Ajusta el tamaño según tus necesidades */
+    width: 80px; /* Ajusta el tamaño según tus necesidades */
     height: auto; /* Mantiene la proporción de la imagen */
-    margin-left:0px;
-    margin-right: 3px;
-    margin-top: 10px;
+    margin-left:5px;
+    margin-right: 0px;
+    margin-top: 5px;
     border-radius: 60px;
     display: inline;
 }
@@ -123,9 +179,9 @@ nav{
 /*imagen menu*/
 .img-menu {
     margin-left:5px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-bottom: none;
-    width: 50px;     /* o el tamaño que vos quieras */
+    width: 40px;     /* o el tamaño que vos quieras */
     height: auto;    /* mantiene la proporción */
 }
 .submenu {
@@ -161,13 +217,13 @@ nav{
 
 /*pie de pagina*/
 footer{
-    background-color:#901501;
+    background-color:#9014015d;
     
 }
 
 
 
-/*cuerpo de pagina*/
+/*CUERPO DE LA PAGINA*/
 @font-face {
     font-family: "ancizar_serif";
     src: url(../fonts/Ancizar_Serif/AncizarSerif-Italic-VariableFont_wght.ttf);
@@ -178,11 +234,19 @@ body{
 }
 h1{
     text-align: center;
-    font-family: "Dancing Script";
-    font-size: 45px;
-    color: #343f85;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #004297;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+.titulo-pag1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: #010f61;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 h2{
     text-align: center;
@@ -203,11 +267,13 @@ h3{
     margin-bottom: 8px;
 }
 h4{
-    text-align: right;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 25px;
     color: #1542becc;
-    margin-right: 70px;
+
 }
 p{
     width: 90%;
@@ -237,13 +303,20 @@ p{
     margin-left: 15px;
 }
 
+.parrafo2::before {
+    content: "•";     /* símbolo del punto */
+    color: rgb(58, 82, 163);      /* color */
+    font-size: 35px;  /* tamaño */
+    margin-right: 4px;/* espacio entre punto y texto */
+}
 .parrafo::before {
     content: "•";     /* símbolo del punto */
-    color: rgb(58, 80, 163);      /* color */
-    font-size: 22px;  /* tamaño */
+    color: rgb(36, 141, 46);      /* color */
+    font-size: 35px;  /* tamaño */
     margin-right: 4px;/* espacio entre punto y texto */
 }
 
+/*CONTENEDORES*/
 .alcoholismo {
 grid-area: alcoholismo;
   background: hsla(121, 32%, 50%, 0.325);
@@ -255,16 +328,15 @@ grid-area: alcoholismo;
 .contenedor-alcoholismo {
     display: grid;
     grid-template-columns: 1fr; /* iframe y div lado a lado */
-    gap: 2rem;
-    margin: 1rem 2rem;
+    gap: 1rem;
+    margin: 1rem;
     /*max-width: 1200px;*/
 }
-
 .alcoholl {
     grid-area: alcoholl;
      width:40rem;
     height: 20rem;
-    margin: 2rem 1rem;
+    margin:0;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 
@@ -274,14 +346,14 @@ grid-area: alcoholismo;
 .contenedor-tabaquismo {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    margin: 6rem 2rem;
+    gap: 0;
+    margin: 1rem;
     max-width: 100%;
 }
 
 .tabaquismo {
     grid-area: tabaquismo;
-  background: #2e72c553;
+  background: #6eb9ff75;
   padding: 1.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -305,6 +377,7 @@ grid-area: alcoholismo;
 
 
 .pag2{
+    grid-area: pag2;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     color: #000;
@@ -322,14 +395,12 @@ grid-area: alcoholismo;
     margin-right: 4px;/* espacio entre punto y texto */
 }
 .p2{
+    grid-area: p2;
   background:linear-gradient(to right,#65a3ffe8 , #65a3ff49); 
-    padding: 15px;
-    margin-top: 60px;
-    margin-left: 500px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 1005px; 
-    height: 450px;
+    padding: 5px;
+    margin: 10px auto;
+    width: 900px; 
+    height: auto;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     font-family: Arial, sans-serif;
     border-radius: 15px;
@@ -339,10 +410,11 @@ grid-area: alcoholismo;
     margin-left: 20px;
     margin-right: 10px;
     align-items:center;
-    width: 800px; 
+    width: 700px; 
     height: 400px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     font-family: Arial, sans-serif; 
+    text-align: justify;
     box-sizing: border-box;
 }
 
@@ -360,42 +432,25 @@ grid-area: alcoholismo;
     float: left;
 }
 .contenedor {
+    grid-area: contenedor;
     display: flex;
     /* quita row-reverse si querés texto a la izquierda e imagen a la derecha */
     flex-direction: row-reverse;   /* o quitá esta línea para invertir */
-    align-items: center;           /* centra verticalmente */
-    justify-content: center;       /* centra horizontalmente */
-    gap: 150px;                     /* espacio entre ambos */
-    margin: 20px auto;             /* centrado del bloque */
+            /* centra verticalmente */
+        /* centra horizontalmente */
+    gap: 15px;                     /* espacio entre ambos */
+    margin: 15px auto;             /* centrado del bloque */
     width: 100%;
     box-sizing: border-box;
 
 } 
 .concientiza{
-    width: 800px;          /* tamaño de la imagen */
-    height: 400px; 
-    margin-right: 40px;
+    grid-area: concientiza;
+    width: 600px;          /* tamaño de la imagen */
+    height: auto; 
+    margin-right: 30px;
 } 
-/*carrusel*/
-/*
-.carrusel{
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    overflow-x: auto;
-    margin: 60px auto;
-    width: 90%;
-}
-.carrusel img{
-    flex: 0 0 auto;
-    scroll-snap-align: center;
-    width: 230px;
-    height: 345px;
-    border-radius: 10px;
-    margin-top: 5%;
-}*/
 
-/*enlaces*/
 .head{
     font-size: 50px;
     color: white;
@@ -410,22 +465,6 @@ grid-area: alcoholismo;
 a:hover{
     color:#cbe5ff;
 }
-/*img.menu-img{
-    width: 5px;
-    height: 5px;
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    cursor: pointer;*/
-/*.rayas2{
-    width: 10px;
-    height: 10px;
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    bottom: 10px;
-    cursor: pointer;
-}*/
 
 .autoridad{
     width: 450px;
